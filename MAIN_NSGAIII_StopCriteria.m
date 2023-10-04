@@ -26,13 +26,12 @@ for arquivo = 1:10
     GD0=10000;
     
     %% Definição do Problema
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %Valores utilizados no HyMOD_5p
 %     nVar = 5;    %Variáveis de decisão.
 %     % Parâmetros do Tank-Model a serem calibrados.
 %     % X = [Smax, b, a, kf, ks]
 %     %Limite inferior de cada uma das variáveis de decisao:
-%     VarMin=[10.0,0.0,0.0,0.15,0.0];   
+%     VarMin=[0.0,0.0,0.0,0.15,0.0];   
 %     %Limite superior de cada uma das variáveis de decisao:
 %     VarMax=[2000,7.0,1.0,1.0,0.15];    
 
@@ -44,9 +43,9 @@ for arquivo = 1:10
 %     % Parâmetros do Tank-Model a serem calibrados.
 %     % X = [Smax, kf, Rmax, T, So, Fo]
 %     %Limite inferior de cada uma das variáveis de decisao:
-%     VarMin=[0.01,-10.0,10.0,0.5,1,1]; 
+%     VarMin=[1,-10.0,1.0,0.5,1,1]; 
 %     %Limite superior de cada uma das variáveis de decisao:
-%     VarMax=[1500,5.0,500.0,4.0,100,200];  
+%     VarMax=[2000,5.0,500.0,4.0,100,200];  
 
 %     VarSize = [1 nVar];         %Size of Decision Variables Matrix
 %     FO = @(x) FO_GR4J(x);       % Function Objective   
@@ -56,7 +55,7 @@ for arquivo = 1:10
 %     % Parâmetros do Tank-Model a serem calibrados.
 %     % X = [Smax, kf, Rmax, T, K, So, Fo]
 %     %Limite inferior de cada uma das variáveis de decisao:
-%     VarMin=[0.01,-10.0,1.0,0.5,0.001,1,1]; 
+%     VarMin=[1,-10.0,1.0,0.5,0.0,1,1]; 
 %     %Limite superior de cada uma das variáveis de decisao:
 %     VarMax=[2000,5.0,500.0,4.0,1.0,100,200];   
 
@@ -80,9 +79,9 @@ for arquivo = 1:10
 %     % Parâmetros do Tank-Model a serem calibrados.
 %     % X = [H1, H2, H3, a1, a2, a3, a4, b1, b2]
 %     %Limite inferior de cada uma das variáveis de decisao:
-%     VarMin=[10,10,10,0.09,0.09,0.09,0.01,0.01,0.01];   
+%     VarMin=[10,10,10,0.09,0.09,0.09,0.001,0.01,0.01];   
 %     %Limite superior de cada uma das variáveis de decisao:
-%     VarMax=[70,45,70,0.5,0.5,0.5,0.1,0.1,0.1];    
+%     VarMax=[70,45,70,0.5,0.5,0.5,0.1,0.15,0.1];    
 
 %     VarSize = [1 nVar];         %Size of Decision Variables Matrix
 %     FO = @(x) FO_TANK3hidro(x);      % Function Objective   
@@ -92,9 +91,9 @@ for arquivo = 1:10
     % Parâmetros do Tank-Model a serem calibrados.
     % X = [HI1, HI2, HI3, HI4, HA1, HA2, HB1, HC1, a1, a2, b1, c1, d1, a0, b0, c0]
     %Limite inferior de cada uma das variáveis de decisão:
-    VarMin=[5,10,50,100,10,10,10,10,0.09,0.09,0.09,0.01,0.001,0.01,0.01,0.001];   
+    VarMin=[5,10,50,100,10,10,10,10,0.09,0.09,0.09,0.001,0.01,0.01,0.01,0.001];   
     %Limite superior de cada uma das variáveis de decisão:
-    VarMax=[75,70,200,500,70,45,70,70,0.5,0.5,0.5,0.1,0.01,0.1,0.1,0.1];  
+    VarMax=[75,70,200,500,70,45,70,70,0.5,0.5,0.5,0.1,0.01,0.15,0.1,0.1];  
 
     VarSize = [1 nVar];          % Size of Decision Variables Matrix
     FO = @(x) FO_TANK4hidro(x);  % Function Objective
